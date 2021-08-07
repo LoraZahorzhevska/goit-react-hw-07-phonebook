@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Container from './Component/Container/Container';
+import ContactForm from './Component/ContactForm/ContactForm';
+import Filter from './Component/Filter/Filter';
+import ContactList from './Component/ContactList/ContactList';
+// import { fetchContacts } from './redux/phonebook/phonebook-operations';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <Container>
+        <div>
+          <h1>Phonebook</h1>
+          <ContactForm />
+
+          <h2>Contacts</h2>
+          <Filter />
+
+          <ContactList />
+        </div>
+      </Container>
+    );
+  }
 }
 
 export default App;
